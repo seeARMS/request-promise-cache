@@ -52,7 +52,7 @@ function promisifyAndCachifyRequest (r, options) {
                 r._cache.del(cacheKey);
             }
 
-            var get = (params.method || 'get').toLowerCase() === 'get';
+            var get = true;
 
             if(get && cacheKey) {
                 var hit = r._cache.get(cacheKey);
